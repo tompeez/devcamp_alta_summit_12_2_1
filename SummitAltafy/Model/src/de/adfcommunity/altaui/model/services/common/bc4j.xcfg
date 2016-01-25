@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="de.adfcommunity.altaui.model.services.AltaSummitService">
+      <AppModuleConfig DeployPlatform="LOCAL" name="AltaSummitServiceLocal" ApplicationName="de.adfcommunity.altaui.model.services.AltaSummitService" jbo.project="de.adfcommunity.altaui.model.Model">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="de.adfcommunity.altaui.model.services.AltaSummitService"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/summit_adfDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig jbo.project="de.adfcommunity.altaui.model.Model" ApplicationName="de.adfcommunity.altaui.model.services.AltaSummitService" DeployPlatform="LOCAL" name="AltaSummitServiceShared">
+         <AM-Pooling jbo.ampool.dynamicjdbccredentials="false" jbo.ampool.resetnontransactionalstate="false" jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="de.adfcommunity.altaui.model.services.AltaSummitService"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/summit_adfDS" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

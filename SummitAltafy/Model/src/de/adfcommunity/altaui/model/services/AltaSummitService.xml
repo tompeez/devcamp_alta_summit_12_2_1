@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AltaSummitService"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true"
+  LoadComponentsLazily="true">
+  <ViewUsage
+    Name="LowStockProducts"
+    ViewObjectName="de.adfcommunity.altaui.model.queries.LowStockProducts"/>
+  <ViewUsage
+    Name="AllProductsSearch"
+    ViewObjectName="de.adfcommunity.altaui.model.queries.ProductView">
+    <ViewCriteriaUsage
+      Name="ProductByNameCriteria"
+      FullName="de.adfcommunity.altaui.model.queries.ProductView.ProductByNameCriteria"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="ProductWarehouseShift"
+    ViewObjectName="de.adfcommunity.altaui.model.queries.ProductWarehouseShiftView">
+    <ViewCriteriaUsage
+      Name="ShiftPossibilitiesCriteria"
+      FullName="de.adfcommunity.altaui.model.queries.ProductWarehouseShiftView.ShiftPossibilitiesCriteria"
+      Required="true"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="ProductInWarehouse"
+    ViewObjectName="de.adfcommunity.altaui.model.queries.InventoryView">
+    <ViewCriteriaUsage
+      Name="SingleProductOfWarehouseCriteria"
+      FullName="de.adfcommunity.altaui.model.queries.InventoryView.SingleProductOfWarehouseCriteria"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="CountriesView"
+    ViewObjectName="de.adfcommunity.altaui.model.queries.CountriesView"/>
+  <ViewUsage
+    Name="CustomersView"
+    ViewObjectName="de.adfcommunity.altaui.model.queries.CustomersView"/>
+  <ViewUsage
+    Name="CustomerView"
+    ViewObjectName="de.adfcommunity.altaui.model.queries.CustomerView"/>
+  <ViewLinkUsage
+    Name="ViewLink"
+    ViewLinkObjectName="de.adfcommunity.altaui.model.queries.links.CountriesOfCustomersLink"
+    SrcViewUsageName="de.adfcommunity.altaui.model.services.AltaSummitService.CountriesView"
+    DstViewUsageName="de.adfcommunity.altaui.model.services.AltaSummitService.CustomersView"
+    Reversed="false"/>
+</AppModule>

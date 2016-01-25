@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+.Tile{
+    padding: 14px 14px;
+    border: 1px solid #E7E7E9;
+    background-color: #ffffff;
+}
+
+.TileHeaderText{
+    
+    color: #a5a5a5; 
+    font-family: helvetica; 
+    font-size: x-large; 
+    font-weight: normal; 
+}
+
+.ListItemText{
+    font-size:large; 
+    color:Black;
+    font-weight:bold;
+}
+
+.ListItemImages {
+    width: 60px;
+    height: 60px;
+}
+
+.AFButtonBackgroundActive:alias {
+    background-color: transparent; 
+    color: #0572ce; 
+    border: none; 
+    border-bottom: medium solid #0572ce; 
+     
+    }
+
+.AFAppNavbarButton {
+    padding-left: 4px; 
+    padding-right: 4px; 
+    padding-bottom: 5px;
+}
